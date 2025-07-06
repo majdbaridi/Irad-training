@@ -1,6 +1,435 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    hello
-  </body>
+   <head>
+      <title>Omar's FASHION store</title>
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
+      <link rel="stylesheet" href="Style.css">
+
+     <style>
+               body {
+          position: relative;
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #cac15e5e;
+         padding-bottom: 60px;
+         }
+         header {
+         background-color: #111;
+         color: #fff;
+         padding: 0px 0;
+         text-align: center;
+         }
+         nav ul {
+         list-style: none;
+         padding: 0;
+         }
+         nav ul li {
+         display: inline;
+         margin: 0 15px;
+         }
+         nav ul li a {
+         color: #fff;
+         text-decoration: none;
+         }
+         div {
+         padding: 20px;
+         text-align: center;
+         }
+         #products {
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+         flex-wrap: wrap;
+         }
+         #products div {
+         background: white;
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         width: 300px;
+         }
+         #products img {
+         max-width: 100%;
+         height: auto;
+         border-radius: 10px;
+         }
+       
+         .footer {
+         background-color: #333;
+         color: white;
+         text-align: center;
+         padding: 5px 0;
+         position: absolute;
+         bottom: 10px;
+         width: 100%;
+         height: 40px;
+         
+         }
+         form {
+         background: white;
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         display: inline-block;
+         }
+         input, textarea {
+         width: 100%;
+         padding: 10px;
+         margin: 5px 0;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         }
+         .Items{
+         padding-top: 5px;
+         padding-bottom: 5px;
+         }
+         #item-table{
+         width: 100%;
+         text-align: center;
+         }
+         .Item-img{
+         height: 60px;
+         border-radius: 15%;
+         border-style: double;
+         border-width: 2px;
+         border-color: #e8e26a;
+         }
+         .Item-img:hover{
+            background-color: rgb(0, 0, 0);
+            border-color: rgb(255, 255, 255);
+            transform: translateY(-10px);
+            }
+         .Item-tag{
+         font-size: 25px;
+         }
+         .Item-tag:hover{
+         color: #45ef11;
+         }
+         
+
+         .logo{
+            width: 100px;
+            float: left;
+            border-radius: 15%;
+            padding-top: 30px;
+            border-width: 2px;
+            border-color: #e8e26a;
+         }
+         .logo:hover{
+            background-color: rgb(0, 0, 0);
+            border-color: rgb(255, 255, 255);
+            transform: translateY(-10px);
+            }
+         .img {
+            width: 800px;
+            border-radius: 3%;
+            border-style: solid;
+            border-width: 10px;
+            border-color: #e8e26a;
+         }
+         .sale1 {
+            width:300px ;
+            position: relative;
+            
+            border-style: dashed;
+            border-color: #000000a3;
+            border-width: 3px;
+            border-radius: 15%;
+            
+            animation: slide 2s infinite;
+         }
+
+              .badge1 {
+               
+               z-index: 10;
+               border: 2px;
+               border-style: solid;
+               border-color: red;
+               position:absolute; left: 125px; top: 150px;
+               background-color: rgba(0, 0, 0, 0.692);
+               border-radius:15px;
+               color:white;
+               animation: slide 2s infinite;
+            }
+          .sale2 {
+            width:300px ;
+            height: 245px;
+            border-style: dashed;
+            border-color: #000000a3;
+            border-width: 3px;
+            border-radius: 15%;
+            animation: slide 2s infinite;
+            position: relative;
+            
+         }
+          .badge2 {
+            z-index: 10;
+            border: 2px;
+            border-style: solid;
+            border-color: red;
+            position:absolute; left: 490px; top: 150px;
+            background-color: rgba(0, 0, 0, 0.692);
+            border-radius:15px;
+            color:white;
+            animation: slide 2s infinite;
+
+          }
+          .sale3 {
+            width:300px ;
+            height: 245px;
+            position: relative;
+            border-style: dashed;
+            border-color: #000000a3;
+            border-width: 3px;
+            border-radius: 15%;
+            animation: slide 2s infinite;
+            
+         }
+          .badge3 {
+            z-index: 10;
+            border: 2px;
+            border-style: solid;
+            border-color: red;
+            position:absolute; left: 830px; top: 150px;
+            background-color: rgba(0, 0, 0, 0.692);
+            border-radius:15px;
+            color:white;
+            animation: slide 2s infinite;
+          }
+
+          @keyframes slide{
+            form {
+               transform: translate(0);
+            }
+            to{
+               transform: translate(3rem);
+            }
+          }
+          .text-center{
+            justify-content: center;
+          }
+          .con{
+            position: absolute; left: 100px;
+            justify-content: center;
+            height: 370px;
+            width: 1100px;
+            background-color: #1111118e;
+            border-radius: 15px;
+            border-style: solid;
+            border-width: 5px;
+            border-color: #e8e26a;
+          }
+          .products {
+            display: flex;
+            
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+         .products-div {
+            
+            position: absolute; left: 250px;
+            background-color: #1111118e;
+            
+            
+            border-style: solid;
+            border-width: 5px;
+            border-color: #e8e26a;
+           
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            height: 500px;
+        }
+        .products-img {
+            height: 200px;
+            width: 200px;
+            border: 5px;
+            border-style: solid; 
+            
+            border-color: #e8e26a;
+
+            
+            
+            border-radius: 10px;
+        }
+        .button {
+         background-color: #00000090;
+         color: white;
+         border: none;
+         padding: 10px 15px;
+         cursor: pointer;
+         border-radius: 5px;
+       }
+         .button:hover {
+         background-color: #ffffff5b;
+       }
+       .cen {
+         padding-top: 900px;
+         padding-left: 600px;
+       }
+       .te{
+         background-color: #c2bf5da8;
+         border-radius: 10px;
+         width: 100%;
+       }
+       .te2{
+         background-color: #c2bf5da8;
+         border-radius: 10px;
+         
+       }
+       .whatsapp-button {
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         background-color: #25D366;
+         color: white;
+         width: 60px;
+         height: 60px;
+         border-radius: 50%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+     }
+     .whatsapp-button img {
+         width: 40px;
+     }
+     .header{
+      
+      margin-right: 60px;
+      
+     }
+        
+     </style>
+
+
+   </head>
+
+   <body class="body">
+      <header>
+
+          <a href="C:\Users\okhaw\Desktop\Full Stack\HM\Fashion Store\Omarsfashionshop.html"><img class="logo" src="data:image/png;base64,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" ></a>
+
+         <div>
+            <h2 class="header"><a href="file:///C:/Users/okhaw/Desktop/Full%20Stack/HM/Fashion%20Store/Omarsfashionshop.html">Omar's FASHION Store</a></h2>
+            <br>
+            <h4 class="header">All Brands in one place</h4>
+         </div>
+
+         
+            <nav>
+               <ul>
+                  <li><a href="file:///C:/Users/okhaw/Desktop/Full%20Stack/HM/Fashion%20Store/Omarsfashionshop.html">Home</a></li>
+                  <li><a href="C:\Users\okhaw\Desktop\Full Stack\HM\Fashion Store\Products.html">Products</a></li>
+                  <li><a href="">About us</a></li>
+                  <li><a href="">Contact us</a></li>
+               </ul>
+            </nav>
+         
+
+      </header>
+
+      <div class="Items">
+      <table id="item-table">
+      <tbody>
+
+      <tr>
+      <td><img src="https://m.media-amazon.com/images/I/61+nnreFHDL._AC_SR480%2C570_.jpg" class="Item-img"></td>	
+      <td><img src="https://m.media-amazon.com/images/I/61BarT-cB+L._AC_UL480_FMwebp_QL65_.jpg" class="Item-img"></td>
+      <td><img src="https://m.media-amazon.com/images/I/81SUHyKG0PL._AC_UL480_FMwebp_QL65_.jpg" class="Item-img"></td>
+      <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAQvC-MU6ys3JUGvgQ3EOn54le_3EyY3qm0A&s" class="Item-img"></td>
+      <td><img src="https://www.hollomen.com/cdn/shop/files/janeiro-slim-fit-gray-suit-396083.jpg?v=1723454683" class="Item-img"></td>
+      </tr>
+
+      <tr>
+      <td><a href="" class="item-tag">Glasses</a></td>
+      <td><a href="" class="item-tag">T-shirts</a></td>
+      <td><a href="" class="item-tag">Hats</a></td>
+      <td><a href="" class="item-tag">Perfumes</a></td>
+      <td><a href="" class="item-tag">Suits</a></td>
+      </tr>
+
+      </tbody>
+      </table>
+      
+      </div>	
+      <br>
+      <br>
+    
+      <div>
+         <div class="con">
+            <div class="row">
+               <div class="col-4">
+                  <div class="badge1">
+                     New Collection
+                  </div>
+                  
+                  <img class="sale1" src="https://www.dragondisplay.co.uk/wp-content/uploads/2020/03/IMG_0010-1-1.jpg">
+                  
+                 
+                 
+               </div>
+               <div class="col-4">
+                  <img class="sale2" src="https://content.jdmagicbox.com/v2/comp/banda/t6/9999px519.x519.240702024435.w7t6/catalogue/meerani-gular-naka-banda-readymade-garment-retailers-pav7ejdvnf.jpg">
+                  <div class="badge2">
+                     Big Sale
+                  </div>
+               </div>
+               <div class="col-4">
+                  <img class="sale3" src="https://media.timeout.com/images/106121416/image.jpg">
+                  <div class="badge3">
+                     Huge Deals
+                  </div>
+               </div>
+               
+            </div>
+            <br>
+            <br>
+            <div class="products products-div">
+               <h2 class="te">Products</h2>
+               <div class="row">
+                  <div class="col-6">
+                     <h3 class="te2">Product 1</h3>
+                     <img class="products-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcdGtS1O30lpncWyilX9rgQwMMT-3ZRItgsw&s" >
+                     <p>Price: $20</p>
+                     <button class="button">Add to Cart</button>
+                  </div>
+      
+                  <div class="col-6">
+                     <h3 class="te2">Product 2</h3>
+                     <img class="products-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLMboFTA0vUltrxGvyxF3Muo5bgY2rHWMwYQ&s">
+                     <p>Price: 39.99$</p>
+                     <button class="button">Add to Cart</button>
+                  </div>
+               </div>
+           </div>
+         </div>
+         
+           
+            
+      </div>
+      
+      <h4 class="cen">Thank You</h4>
+      
+      
+
+
+
+
+  
+
+   <footer class="footer">
+      <a href="https://wa.me/+4915212510590" target="_blank" class="whatsapp-button">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+     </a>
+   <h5>All rights reserved. Omar Khawas @2025</h5>
+   </footer>
+   
+      
+      
+    
+   </body>
 </html>
+    
