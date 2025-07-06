@@ -1,6 +1,361 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    hello
-  </body>
+<head>
+    
+    <title>OMRAN FASHION STORE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background:linear-gradient(to bottom, #806BDC, #F0F0F0);
+            color: #333;
+        }
+
+        a {
+            color: black;
+            font-weight: 550;
+            text-decoration: none;
+        }
+
+        header {
+            height: 60px;
+            background-color: #806BDC;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 a {
+            font-size: 30px;
+            color: white;
+            display: inline-block;
+            padding-top: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFC107;
+        }
+
+        .Items {
+            padding: 40px 20px;
+        }
+
+        #item-table {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .Item-img {
+            height: 120px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .Item-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .Item-tag {
+            font-size: 16px;
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .Item-tag:hover {
+            color: #806BDC;
+        }
+
+        .Shopping-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .Sales-table {
+            width: 90vw;
+            margin: 20px auto;
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 12px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .Sales-table-head {
+            background-color: #806BDC;
+            color: white;
+            padding: 10px;
+        }
+
+        .Information {
+            width: 92vw;
+            margin: 20px auto;
+            font-size: 12px;
+            color: #878787;
+            list-style-position: inside;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            height: 50px;
+            padding-top: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+        
+        .footer-botton {
+    padding: 5px 10px;
+    font-size: 10px;
+    background-color: #806BDC;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    
+    
+}
+           .footer-botton:hover {
+    background-color: violet ;
+    transform: scale(1.1);
+   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+        
+        .animation {
+            display: flex;
+            animation: slide 10s infinite;
+        }
+
+        .i-img {
+            height: 150px;
+            border-radius: 12px;
+            margin: 0 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .badge {
+            position: absolute;
+            background-color: red;
+            color: white;
+            border-radius: 12px;
+            font-size: 14px;
+            padding: 4px 10px;
+            top: 10px;
+            left: 10px;
+            font-weight: bold;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(800px);
+            }
+        }
+
+        .product-container{
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+
+  }
+
+     
+  .product{
+    display: flex;
+    width: 200px;
+    padding: 10px;
+    margin:15px;
+    background-color: mirge;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+
+ .product-img{
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+    height: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .product-img:hover {
+             color: #FFC107;
+             transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+   .product-botton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #806BDC;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+}
+
+.product-botton:hover {
+    background-color: green;
+    transform: scale(1.1);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+   
+  .new-badg{
+
+            position: absolute;
+             
+            background: red;
+            color: white;
+        
+            font-size: 14px;
+            top: 10px;
+            left: 10px;
+            padding: 5px;
+            border-radius: 5px;
+           
+           }
+        
+    </style>
+</head>
+<body>
+
+    <script>
+         function copyright(){
+        document.getElementById("footer").innerHTML= "Thank you for visiting our store.";
+    }
+    </script>
+    <header>
+        <h1><a href="">OMRAN FASHION STORE</a></h1>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="Items">
+        <table id="item-table">
+            <tbody>
+                <tr>
+                    <td><img src="https://static.zara.net/assets/public/b025/4fb4/4cc845fd9530/3518822b5866/00722422251-e1/00722422251-e1.jpg?ts=1738148079278&w=279" class="Item-img">
+                    </td>
+                    <td><img src="https://static.zara.net/assets/public/31bf/43f6/da2d464690e5/f0db8d4af7cc/02750402500-e1/02750402500-e1.jpg?ts=1732620083033&w=279" class="Item-img">
+                    </td>
+                    <td><img src="https://static.zara.net/assets/public/4198/5c1d/530d4c8c85b1/62a87e8a7210/20213003999-e1/20213003999-e1.jpg?ts=1727854396598&w=279" class="Item-img">
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.zara.com/de/de/herren-t-shirts-l855.html?v1=2432042" target="_blank" class="Item-tag">T-Shirts</a>
+                    </td>
+                    <td><a href="https://www.zara.com/de/de/herren-accessoires-sonnenbrillen-l558.html?v1=2436450" target="_blank" class="Item-tag">Glasses</a>
+                    </td>
+                    <td><a href="https://www.zara.com/de/de/herren-accessoires-parfums-l551.html?v1=2436468" target="_blank" class="Item-tag">Perfumes</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="Shopping-container">
+        <img src="https://th.bing.com/th/id/OIP.QxwGVqKHyD6vXxLPkdx8BAHaFE?w=290&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+        <img src="https://th.bing.com/th/id/OIP.jL4HT5H9L4PQspc6KGcFTgHaE7?w=288&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+        <img src="https://th.bing.com/th/id/OIP.DHBwkUa4lxBPF5BM5u5XygHaE0?pid=ImgDet&w=179&h=116&c=7&dpr=1,3">
+    </div>
+
+    <div class="Shopping-container">
+        <div class="box">
+            <div class="animation">
+                <div class="badge">Sale</div>
+                <img src="https://th.bing.com/th/id/OIP.7QMLV5BYsWS8pWXzGZDZegHaI-" class="i-img">
+                <img src="https://th.bing.com/th/id/OIP.U5-a6WDfgmkNlQbzsUKXDgHaHa" class="i-img">
+                <img src="https://th.bing.com/th/id/OIP.6-7n1T8gBNpcnNMb87u5XgHaJ3" class="i-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="product-container">
+       <div class="product">
+         <img class="product-img" src="https://static.zara.net/assets/public/682c/1026/84b642b680fa/7517001b2225/01564301401-p/01564301401-p.jpg?ts=1738666743088&w=702">
+        <div class="new-badg">new</div>
+        <h2>KOMFORTABLE ANZUGHOSE </h2>
+        <h5>39,95 EUR</h5>
+        <p>Slim-Fit-Hose aus Stoff mit Viskose. Vordertaschen und Gesäßpaspeltaschen. Reißverschluss und Knopf vorne.</p> 
+        <button class="product-botton"><a href="https://www.zara.com/de/de/komfortable-anzughose-p01564301.html?v1=413803579" target="_blank">Buy it</a>
+        </button>
+       
+       </div>
+    
+
+       <div class="product">
+        <img class="product-img" src="https://static.zara.net/assets/public/538e/cb29/fa1041858086/d2dd5c9dcb8a/04505722401-p/04505722401-p.jpg?ts=1742984586224&w=702">
+        <div class="new-badg">new</div>
+        <h2>RELAXED-FIT-BLAZER </h2>
+        <h5>139,00 EUR</h5> <br>
+        <p> Relaxed-Fit-Blazer aus Wollmischgewebe. Reverskragen und lange Ärmel mit geknöpften Manschetten.</p>
+        <button class="product-botton"><a href="https://www.zara.com/de/de/relaxed-fit-blazer-%E2%80%93-limited-edition-p04505722.html?v1=438065651&v2=2544454" target="_blank">Buy it</a>
+        </button>
+
+<br>
+
+      </div>
+</div>
+
+
+    <footer>
+      <p id="footer">&copy; 2025 Omran Fashion Store. 
+        <button onclick="copyright()" class="footer-botton"> Click here</button>
+      </p>
+    </footer>
+</body>
 </html>
